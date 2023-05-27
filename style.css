@@ -1,0 +1,30 @@
+body {
+  font-family: 'Courier New', Courier, monospace;
+}
+body h1 {
+  text-align: center;
+}
+body .jogo {
+  outline: solid 1px red;
+  width: 400px;
+  height: 600px;
+  position: relative;
+}
+body .jogo h1 {
+  outline: solid 1px green;
+}
+body .jogo .pentagrama {
+  outline: solid 1px green;
+}
+body .jogo #botoes {
+  outline: solid 1px green;
+  position: absolute;
+  width: 100%;
+  height: 100px;
+  bottom: 0px;
+}
+body .jogo #botoes button {
+  width: 33%;
+  margin: 0px;
+  padding: 0px;
+}
