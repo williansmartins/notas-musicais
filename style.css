@@ -18,6 +18,24 @@ body .clave {
   top: -24px;
   left: 20px;
   line-height: 480px;
+  color: #767676;
+}
+body .nota {
+  background-color: black;
+  width: 60px;
+  height: 60px;
+  display: inline-block;
+  position: absolute;
+  top: 115px;
+  left: 70%;
+  -webkit-transform: translateX(-50%);
+  transform: translateX(-50%);
+  border-radius: 50%;
+}
+@media only screen and (min-width: 500px) {
+  body .nota {
+    left: 50%;
+  }
 }
 body #botoes {
   position: absolute;
