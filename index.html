@@ -24,19 +24,20 @@
     </div>
     <div class="clave">
         𝄞
+    </div><span class="nota " ng-class="notaEscolhida['nota']"></span>
+    <div id="resultado" class="">
+        <div class="alert alert-success" ng-if="acertou" role="alert">
+            Acertou!
+        </div>
+        <div class="alert alert-danger" ng-if="!acertou && acertou!=null" role="alert">
+            Errou!
+        </div>
     </div>
-    <span class="nota fa3"></span>
     <div id="botoes" class="container">
         <div class="row">
-            <div class="col-4">
-                <a href="#" class="btn btn-success">Dó</a>
-            </div>  
-            <div class="col-4">
-                <a href="#" class="btn btn-success">Ré</a>
-            </div>  
-            <div class="col-4">
-                <a href="#" class="btn btn-success">Mi</a>
-            </div>  
+            <div class="col-4" ng-repeat="option in options">
+                <a href="#" class="btn btn-success" ng-click="validar(option)">{{option | uppercase}}</a>
+            </div>
         </div>
     </div>
 </body>

@@ -6,6 +6,8 @@ body .pentagrama .linha {
   border-bottom: solid 1px black;
   display: block;
   height: 60px;
+  text-align: right;
+  padding-right: 25px;
 }
 body .pentagrama .linha span {
   position: absolute;
@@ -26,6 +28,7 @@ body .nota {
   height: 60px;
   display: inline-block;
   position: absolute;
+  top: -999999px;
   left: 70%;
   -webkit-transform: translateX(-50%);
   transform: translateX(-50%);
@@ -77,6 +80,16 @@ body .nota.la4 {
 }
 body .nota.si4 {
   top: -5px;
+}
+body #resultado {
+  position: absolute;
+  bottom: 90px;
+  width: 100%;
+}
+body #resultado .alert {
+  width: 100%;
+  font-size: 60px;
+  text-align: center;
 }
 body #botoes {
   position: absolute;

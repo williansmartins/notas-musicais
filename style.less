@@ -15,7 +15,8 @@ body{
             border-bottom: solid 1px black;
             display: block;
             height: @tamanho-nota;
-            // line-height: @tamanho-nota;
+            text-align: right;
+            padding-right: 25px;
             
             span{
                 position: absolute;
@@ -42,7 +43,7 @@ body{
         display: inline-block;
         position: absolute;
         
-        // top: 115px;
+        top: -999999px;
         left: 70%;
         
         -webkit-transform: translateX(-50%);
@@ -103,6 +104,17 @@ body{
         }
     }
 
+    #resultado{
+        position: absolute;
+        bottom: 10px + 80px;
+        width: 100%; 
+
+        .alert{
+            width: 100%; 
+            font-size: 60px;
+            text-align: center;
+        }
+    }
 
     #botoes{
         // outline: solid 1px red;
