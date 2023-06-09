@@ -26,7 +26,6 @@ body .nota {
   height: 60px;
   display: inline-block;
   position: absolute;
-  top: 115px;
   left: 70%;
   -webkit-transform: translateX(-50%);
   transform: translateX(-50%);
@@ -37,12 +36,54 @@ body .nota {
     left: 50%;
   }
 }
+body .nota.do3 {
+  top: 385px;
+}
+body .nota.re3 {
+  top: 355px;
+}
+body .nota.mi3 {
+  top: 325px;
+}
+body .nota.fa3 {
+  top: 295px;
+}
+body .nota.sol3 {
+  top: 265px;
+}
+body .nota.la3 {
+  top: 235px;
+}
+body .nota.si3 {
+  top: 205px;
+}
+body .nota.do4 {
+  top: 175px;
+}
+body .nota.re4 {
+  top: 145px;
+}
+body .nota.mi4 {
+  top: 115px;
+}
+body .nota.fa4 {
+  top: 85px;
+}
+body .nota.sol4 {
+  top: 55px;
+}
+body .nota.la4 {
+  top: 25px;
+}
+body .nota.si4 {
+  top: -5px;
+}
 body #botoes {
   position: absolute;
   left: 50%;
   -webkit-transform: translateX(-50%);
   transform: translateX(-50%);
-  bottom: 5px;
+  bottom: 10px;
 }
 body #botoes .btn {
   width: 100%;

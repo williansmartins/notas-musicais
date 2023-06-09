@@ -7,20 +7,6 @@ body{
         text-align: center;
     }
 
-    .jogo{
-        // outline: solid 1px red;
-        // width: 400px;
-        // height: 600px;
-        // margin: 0 auto;
-
-        // position: relative;
-
-        // h1{
-        //     // outline: solid 1px green;
-        // }
-
-        
-    }
     .pentagrama{
         // outline: solid 1px green;
         
@@ -55,14 +41,10 @@ body{
         height: @tamanho-nota;
         display: inline-block;
         position: absolute;
-        // left: 300px;
         
-        position: absolute;
-        
-        
-        top: 115px;
+        // top: 115px;
         left: 70%;
-        // left: 240px;
+        
         -webkit-transform: translateX(-50%);
         transform: translateX(-50%);
 
@@ -70,8 +52,54 @@ body{
         
         @media only screen and (min-width : 500px) {
             left: 50%;
-            // left: 240px;
-            // background-color: red;
+        }
+
+        @base: 325px;
+
+        &.do3{
+            top: @base - (@tamanho-nota/2) * -2;
+        }
+        &.re3{
+            top: @base - (@tamanho-nota/2) * -1;
+        }
+        &.mi3{
+            top: @base - (@tamanho-nota/2) * 0;
+        }
+        &.fa3{
+            top: @base - (@tamanho-nota/2) * 1;
+        }
+        &.sol3{
+            top: @base - (@tamanho-nota/2) * 2;
+        }
+        &.la3{
+            top: @base - (@tamanho-nota/2) * 3;
+        }
+        &.si3{
+            top: @base - (@tamanho-nota/2) * 4;
+        }
+
+        // oitava 4
+
+        &.do4{
+            top: @base - (@tamanho-nota/2) * 5;
+        }
+        &.re4{
+            top: @base - (@tamanho-nota/2) * 6;
+        }
+        &.mi4{
+            top: @base - (@tamanho-nota/2) * 7;
+        }
+        &.fa4{
+            top: @base - (@tamanho-nota/2) * 8;
+        }
+        &.sol4{
+            top: @base - (@tamanho-nota/2) * 9;
+        }
+        &.la4{
+            top: @base - (@tamanho-nota/2) * 10;
+        }
+        &.si4{
+            top: @base - (@tamanho-nota/2) * 11;
         }
     }
 
@@ -85,7 +113,7 @@ body{
         -webkit-transform: translateX(-50%);
         transform: translateX(-50%);
 
-        bottom: 5px; 
+        bottom: 10px; 
 
         .btn{
             width: 100%;
