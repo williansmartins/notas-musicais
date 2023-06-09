@@ -12,6 +12,13 @@ body .pentagrama .linha span {
   bottom: 0;
   padding-left: 5px;
 }
+body .clave {
+  position: absolute;
+  font-size: 480px;
+  top: -24px;
+  left: 20px;
+  line-height: 480px;
+}
 body #botoes {
   position: absolute;
   left: 50%;
