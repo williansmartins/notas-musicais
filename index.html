@@ -27,22 +27,24 @@
     </div><span class="nota " ng-class="notaEscolhida['nota']"></span>
     <div id="resultado" class="">
         <div class="alert alert-success" ng-if="acertou" role="alert">
-            Acertou! {{timer}}
+            Acertou!
         </div>
         <div class="alert alert-danger" ng-if="!acertou && acertou!=null" role="alert">
-            Errou! {{timer}}
+            Errou!
         </div>
         <div class="alert alert-info" role="alert">
             <!-- <label id="minutes">00</label>:<label id="seconds">00</label>:<label id="miliseconds">00</label> -->
             <label id="timer">...</label>
         </div>
     </div>
-    <div id="botoes" class="container">
+    <div id="botoes" class="container" ng-if="acertou==null">
         <div class="row">
             <div class="col-4" ng-repeat="option in options">
-                <a href="#" class="btn btn-success" ng-click="validar(option)">{{option | uppercase}}</a>
+                <a href="#selecionouUmaOpcao-{{option}}" class="btn btn-success" ng-click="validar(option)">{{option | uppercase}}</a>
             </div>
         </div>
     </div>
+
+    <script src="jquery-1.9.1.min.js"></script>
 </body>
 </html>
