@@ -27,10 +27,14 @@
     </div><span class="nota " ng-class="notaEscolhida['nota']"></span>
     <div id="resultado" class="">
         <div class="alert alert-success" ng-if="acertou" role="alert">
-            Acertou!
+            Acertou! {{timer}}
         </div>
         <div class="alert alert-danger" ng-if="!acertou && acertou!=null" role="alert">
-            Errou!
+            Errou! {{timer}}
+        </div>
+        <div class="alert alert-info" role="alert">
+            <!-- <label id="minutes">00</label>:<label id="seconds">00</label>:<label id="miliseconds">00</label> -->
+            <label id="timer">...</label>
         </div>
     </div>
     <div id="botoes" class="container">

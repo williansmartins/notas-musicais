@@ -14,10 +14,15 @@ app.controller('Controller1', function($scope, $timeout){
     ];
 
     $scope.acertou = null;
+    $scope.minutesLabel = document.getElementById("minutes");
+    $scope.secondsLabel = document.getElementById("seconds");
+    $scope.milisecondsLabel = document.getElementById("miliseconds");
+    $scope.timer = 0;
+    var intervaloTempo = null;
 
     function mostrarNotaRandom() {
         $scope.notaEscolhida = notas[Math.floor(Math.random() * notas.length)];
-        $timeout(mostrarNotaRandom, 2000);
+        const myTimeout = setTimeout(mostrarNotaRandom, 2000);
     }
 
     function novaRodada(){
@@ -31,9 +36,19 @@ app.controller('Controller1', function($scope, $timeout){
         ];
 
         $scope.options.sort(() => Math.random() - 0.5);
+
+        var startTime = Date.now();
+        intervaloTempo = setInterval(function() {
+            var elapsedTime = Date.now() - startTime;
+            $scope.timer = (elapsedTime / 1000).toFixed(2)
+            document.getElementById("timer").innerHTML = $scope.timer;
+        }, 100);
     }
 
     $scope.validar = function(option){
+
+        clearInterval(intervaloTempo);
+
         if(option == $scope.notaEscolhida["certa"]){
             $scope.acertou = true;
         }else{
@@ -46,6 +61,16 @@ app.controller('Controller1', function($scope, $timeout){
 
     function limparResultado(){
         $scope.acertou = null;
+        
+    }
+
+    function pad(val) {
+        var valString = val + "";
+        if (valString.length < 2) {
+            return "0" + valString;
+        } else {
+            return valString;
+        }
     }
 
     novaRodada();
