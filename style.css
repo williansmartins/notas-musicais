@@ -17,7 +17,7 @@ body .pentagrama .linha span {
 body .clave {
   position: absolute;
   font-size: 480px;
-  top: -24px;
+  top: -35px;
   left: 20px;
   line-height: 480px;
   color: #767676;
